@@ -1,0 +1,74 @@
+@import 'reset.less';
+
+.button {
+    font-family: inherit;
+    font-size: larger;
+    font-weight: 700;
+    height: 100px;
+    margin: 1%;
+    max-width: 100px;
+    width: calc(100%/3);
+}
+
+.button-level {
+    max-height: 3rem;
+}
+
+.buttons {
+    align-items: center;
+    align-content: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: calc(100hv*2/3);
+    justify-content: space-around;
+    width: 100%;
+}
+
+.display__equation {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.display__input {
+    border: none;
+    font-family: inherit;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: end;
+    width: 100%;
+}
+
+.level-panel {
+    align-items: center;
+    align-content:stretch;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.page {
+    align-items: center;
+    background-color: lightgray;
+    display: flex;
+    font-family: 'Orbitron', sans-serif;
+    justify-content: center;
+}
+
+.page-content {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: auto;
+    width: 330px;
+}
+
+@media (max-height: 748px) {
+    .h1 {
+        display: none;
+    }
+    .input-panel, .equation-panel {
+        display: inline-block;
+    }
+    
+}

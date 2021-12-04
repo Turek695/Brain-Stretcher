@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculation Trainer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="page">
@@ -17,14 +20,21 @@
             <button class="button button-level" id="lv2">Medium</button>
             <button class="button button-level" id="lv3">Hard</button>
         </div>
-        <div class="message-panel panel">
-            <h3 class="h3"><span class="message__display">Hello!</span></h3>
+        <div class="level-panel">
+            <button class="button button-level button-level__operator" id="sum">&plus;</button>
+            <button class="button button-level button-level__operator" id="mult">&times;</button>
+            <button class="button button-level button-level__operator" id="sub">&minus;</button>
         </div>
-        <div class="equation-panel panel">
-            <h2 class="h2"><span class="equation__display"></span></h2>
-        </div>
-        <div class="display-panel">
-            <input class="display__input" type="number" name="" id="" placeholder="0">
+        <div class="panel">
+            <div class="message-panel">
+                <h3 class="h3"><span class="display__message">Hello!</span></h3>
+            </div>
+            <div class="equation-panel">
+                <h2 class="h2"><span class="display__equation"></span></h2>
+            </div>
+            <div class="input-panel">
+                <input class="display__input" type="number" name="" id="" placeholder="0">
+            </div>
         </div>
         <div class="buttons">
             <button class="button num-button" id="1">1</button>
@@ -36,13 +46,13 @@
             <button class="button num-button" id="7">7</button>
             <button class="button num-button" id="8">8</button>
             <button class="button num-button" id="9">9</button>
-            <button class="button del-button" id="del">&larr;</button>
+            <button class="button del-button" id="del">&leftarrow;</button>
             <button class="button num-button" id="0">0</button>
             <button class="button enter-button" id="enter">&equals;</button>
         </div>
     </main>
 
-    <script src="src.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
