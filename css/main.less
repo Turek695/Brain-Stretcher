@@ -1,6 +1,7 @@
 @import 'reset.less';
 
 .button {
+    flex-shrink: 1;
     font-family: inherit;
     font-size: larger;
     font-weight: 700;
@@ -39,6 +40,13 @@
     width: 100%;
 }
 
+.footer {
+    text-align: center;
+    height: 5vh;
+    font-size: .8em;
+    word-wrap: normal;
+}
+
 .level-panel {
     align-items: center;
     align-content:stretch;
@@ -51,15 +59,12 @@
     align-items: center;
     background-color: lightgray;
     display: flex;
+    flex-direction: column;
     font-family: 'Orbitron', sans-serif;
     justify-content: center;
 }
 
 .page-content {
-    align-content: center;
-    display: flex;
-    flex-direction: column;
-    justify-items: auto;
     width: 330px;
 }
 
