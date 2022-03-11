@@ -2,6 +2,8 @@ const equationDisplay = document.querySelector('.display__equation');
 const input = document.querySelector('.display__input');
 const numButtons = document.querySelectorAll('.num-button');
 const delButton = document.querySelector('.del-button');
+const signButton = document.querySelector('.sign-button');
+const comaButton = document.querySelector('.coma-button');
 const enterButton = document.querySelector('.enter-button');
 const easyButton = document.querySelector('#lv1');
 const mediumButton = document.querySelector('#lv2');
@@ -45,8 +47,11 @@ for (let button of numButtons) {
 }
 
 delButton.addEventListener('click', () => input.value = input.value.slice(0, -1));
-
+signButton.addEventListener('click', () => input.value *= -1);
+comaButton.addEventListener('click', () => input.value += '.');
 enterButton.addEventListener('click', () => inputCheck(input.value, equation[3]));
+
+
 
 // przyciski klawiatury
 window.addEventListener('keydown', function (evt) {
@@ -80,6 +85,10 @@ window.addEventListener('keydown', function (evt) {
             break;
         case '0':
             input.value += '0';
+            break;
+        case '.':
+        case ',':
+            input.value += 'Separator';
             break;
         case '-':
             if (input.value) { input.value *= -1; };

@@ -1,28 +1,32 @@
 @import 'reset.less';
 
+.banner {
+    flex-shrink: 0;
+    height: 5vh;
+}
+
 .button {
     font-family: inherit;
     font-size: larger;
     font-weight: 700;
-    height: 100px;
     margin: 1%;
-    max-width: 100px;
-    width: calc(100%/3);
+    min-height: 3rem;
 }
 
 .button-level {
-    max-height: 3rem;
+    height: 3rem;
 }
 
 .buttons {
-    align-items: center;
-    align-content: stretch;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: calc(100hv*2/3);
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25% 25%;
+    max-height: 400px;
     width: 100%;
+}
+
+.del-button {
+    grid-area: 1/4/3/5;
 }
 
 .display__equation {
@@ -39,11 +43,21 @@
     width: 100%;
 }
 
+.enter-button {
+    grid-area: 3/4/5/5;
+}
+
 .footer {
     text-align: center;
     height: 5vh;
     font-size: .8em;
     word-wrap: normal;
+    margin-top: auto;
+}
+
+html {
+    height: 100%;
+    width: 100%;
 }
 
 .level-panel {
@@ -60,17 +74,16 @@
     display: flex;
     flex-direction: column;
     font-family: 'Orbitron', sans-serif;
-    justify-content: center;
+    min-height: 100%;
 }
 
 .page-content {
     width: 330px;
+    // display: flex;
+    flex: 1 0 auto;
 }
 
 @media (max-height: 748px) {
-    .h1 {
-        display: none;
-    }
     .input-panel, .equation-panel {
         display: inline-block;
     }
