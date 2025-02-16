@@ -1,72 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Brain Stretcher</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <meta
+            name="description"
+            content="Brain Stretcher to prosty generator zadań matematycznych, który pomaga ćwiczyć umiejętności matematyczne."
+        <meta
+            name="keywords"
+            content="matematyka, zadania matematyczne, ćwiczenia matematyczne, umiejętności matematyczne, nauka matematyki"
+        <meta title="Brain Stretcher - ćwiczenia matematyczne" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brain Stretcher</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-</head>
-
-<body class="page">
-    <header class="banner">
-        <h1 class="h1">Brain Stretcher</h1>
-    </header>
-    <main class="page-content">
-        <div class="level-panel">
-            <button class="button button-level" id="lv1">do 30</button>
-            <button class="button button-level" id="lv2">do 60</button>
-            <button class="button button-level" id="lv3">do 100</button>
-        </div>
-        <div class="level-panel">
-            <button class="button button-level button-level__operator" id="sum">&plus;</button>
-            <button class="button button-level button-level__operator" id="mult">&times;</button>
-            <button class="button button-level button-level__operator" id="sub">&minus;</button>
-            <button class="button button-level button-level__operator" id="div">&divide;</button>
-        </div>
-        <div class="panel">
-            <div class="message-panel">
-                <h3 class="h3"><span class="display__message">Hello!</span></h3>
+    <body class="page">
+        <header class="banner">
+            <h1 class="h1">Brain Stretcher</h1>
+        </header>
+        <main class="page-content">
+            <div class="level-panel">
+                <button class="button button-level" id="lv1">do 30</button>
+                <button class="button button-level" id="lv2">do 60</button>
+                <button class="button button-level" id="lv3">do 100</button>
             </div>
-            <div class="equation-panel">
-                <h2 class="h2"><span class="display__equation"></span></h2>
+            <div class="level-panel">
+                <button class="button button-level button-level__operator" id="sum">&plus;</button>
+                <button class="button button-level button-level__operator" id="mult">
+                    &times;
+                </button>
+                <button class="button button-level button-level__operator" id="sub">&minus;</button>
+                <button class="button button-level button-level__operator" id="div">
+                    &divide;
+                </button>
             </div>
-            <div class="input-panel">
-                <input class="display__input" type="number" step="0.001" name="" id="" placeholder="0">
+            <div class="panel">
+                <span class="display__message">Hello!</span>
+                <div class="input-panel">
+                    <span class="display__equation"></span>
+                    <input
+                        class="display__input"
+                        type="number"
+                        step="0.001"
+                        name=""
+                        id=""
+                        placeholder="0"
+                    />
+                </div>
             </div>
-        </div>
-        <div class="buttons">
-            <!-- <div class="buttons-numbers"> -->
-            <button class="button num-button" id="7">7</button>
-            <button class="button num-button" id="8">8</button>
-            <button class="button num-button" id="9">9</button>
-            <button class="button num-button" id="4">4</button>
-            <button class="button num-button" id="5">5</button>
-            <button class="button num-button" id="6">6</button>
-            <button class="button num-button" id="1">1</button>
-            <button class="button num-button" id="2">2</button>
-            <button class="button num-button" id="3">3</button>
-            <button class="button sign-button" id="sign">&plusmn;</button>
-            <button class="button num-button" id="0">0</button>
-            <button class="button coma-button" id=".">.</button>
-            <!-- </div>
-            <div class="buttons-functions"> -->
-            <button class="button enter-button" id="enter">&equals;</button>
-            <button class="button del-button" id="del">&leftarrow;</button>
-            <!-- </div> -->
-        </div>
-    </main>
-    <footer class="footer">
-        <p>
-            Copyright &copy; Łukasz Turowski. All Rights Reserved.
-        </p>
-    </footer>
+            <div class="buttons">
+                <button class="button num-button" id="7">7</button>
+                <button class="button num-button" id="8">8</button>
+                <button class="button num-button" id="9">9</button>
+                <button class="button num-button" id="4">4</button>
+                <button class="button num-button" id="5">5</button>
+                <button class="button num-button" id="6">6</button>
+                <button class="button num-button" id="1">1</button>
+                <button class="button num-button" id="2">2</button>
+                <button class="button num-button" id="3">3</button>
+                <button class="button sign-button" id="sign">&plusmn;</button>
+                <button class="button num-button" id="0">0</button>
+                <button class="button coma-button" id=".">.</button>
+                <button class="button enter-button" id="enter">&equals;</button>
+                <button class="button del-button" id="del">&leftarrow;</button>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>Copyright &copy; 2025 <a href="https://lukaszturowski.xyz">Łukasz Turowski</a>. All&nbsp;Rights Reserved.</p>
+        </footer>
 
-    <script src="js/main.js"></script>
-</body>
-
+        <script defer src="js/main.js"></script>
+    </body>
 </html>
