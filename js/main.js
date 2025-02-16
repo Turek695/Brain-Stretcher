@@ -121,11 +121,15 @@ window.addEventListener("keydown", function (evt) {
 // funkcje
 function inputCheck(value, result) {
     if (result == value) {
-        message.textContent = "Correct!";
+        message.textContent = "Dobrze!";
+        message.classList.add("correct");
+        message.classList.remove("wrong");
         equation = equationGen(equationLevel, equationType);
         equationDisplay.textContent = `${equation[0]} ${equation[1]} ${equation[2]} =`;
     } else {
-        message.textContent = "Wrong!";
+        message.textContent = "Trzeba poprawić";
+        message.classList.add("wrong");
+        message.classList.remove("correct");
     }
     input.value = "";
 }
@@ -204,18 +208,19 @@ function lvChange(lv) {
     equationLevel = lv;
     equation = equationGen(equationLevel, equationType);
     equationDisplay.textContent = `${equation[0]} ${equation[1]} ${equation[2]} =`;
+    
     switch (lv) {
         case 1:
-            message.textContent = "Dificulty equation level changed to easy.";
+            message.textContent = "Zmieniono zakres do 30";
             break;
         case 2:
-            message.textContent = "Dificulty equation level changed to medium.";
+            message.textContent = "Zmieniono zakres do 60";
             break;
         case 3:
-            message.textContent = "Dificulty equation level changed to hard.";
+            message.textContent = "Zmieniono zakres do 100";
             break;
         default:
-            message.textContent = "Wrong equation level change.";
+            message.textContent = "Błąd zmiany zakresu";
             break;
     }
 }
@@ -226,19 +231,19 @@ function typeChange(eqType) {
     equationDisplay.textContent = `${equation[0]} ${equation[1]} ${equation[2]} =`;
     switch (eqType) {
         case "sum":
-            message.textContent = "Equation type changed to addition.";
+            message.textContent = "Zmieniono na dodawanie";
             break;
         case "sub":
-            message.textContent = "Equation type changed to substraction.";
+            message.textContent = "Zmieniono na odejmowanie";
             break;
         case "mult":
-            message.textContent = "Equation type changed to multiplication.";
+            message.textContent = "Zmieniono na mnożenie";
             break;
         case "div":
-            message.textContent = "Equation type changed to division.";
+            message.textContent = "Zmieniono na dzielenie";
             break;
         default:
-            message.textContent = "Wrong equation type change.";
+            message.textContent = "Błąd zmiany działania";
             break;
     }
 }
