@@ -52,6 +52,11 @@ multButton.addEventListener("click", () => {
         typeChange("mult");
     }
 });
+divButton.addEventListener("click", () => {
+    if (equationType !== "div") {
+        typeChange("div");
+    }
+});
 for (let button of numButtons) {
     button.addEventListener("click", () => {
         input.value += button.id;
